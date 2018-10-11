@@ -15,8 +15,8 @@ public class SmallBoard {
 		board.set(index, player);
 	}
 	
-	public float[] getBoardForNN(char player) {
-		float[] returnBoard = new float[9];
+	public int[] getBoardForPlayer(char player) {
+		int[] returnBoard = new int[9];
 		
 		for(int i = 0; i < 9; i++) {
 			
@@ -37,7 +37,7 @@ public class SmallBoard {
 		//ADD TIE CHECK
 		char[] all = {board.get(0), board.get(1), board.get(2), board.get(3), board.get(4), board.get(5), board.get(6), board.get(7), board.get(8)};
 		if (count(all, ' ') == 0) {
-			return "TIE";
+			return " ";
 		}
 		//Top Row
 		char[] top = {board.get(0), board.get(1), board.get(2)};

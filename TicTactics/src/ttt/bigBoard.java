@@ -17,8 +17,8 @@ public class BigBoard {
 		}
 	}
 	
-	public void makeMove(char player, int bigIndex, int smallIndex) {
-		smallBoards.get(bigIndex).placeMark(player, smallIndex);
+	public void makeMove(char player, Move move) {
+		smallBoards.get(move.bIndex).placeMark(player, move.sIndex);
 	}
 	
 	public String checkForWin() {
@@ -102,6 +102,28 @@ public class BigBoard {
 			}
 		}
 		return c;
+	}
+	
+	public String getFairBoards() {
+		String res = "";
+		
+		for (int i = 0; i < 9; i++) {
+			if (smallBoards.get(i).checkForWin().length() != 1) {
+				res += String.valueOf(i);
+			}
+		}
+		
+		return res;
+	}
+	
+	public int[][] makeBoardForPlayer(char player) {
+		int[][] boardsArr = new int[9][9];
+		
+		for (int i = 0; i < 9; i++) {
+			boardsArr[i] = smallBoards.get(i).getBoardForPlayer(player);
+		}
+		
+		return boardsArr;
 	}
 	
 }
