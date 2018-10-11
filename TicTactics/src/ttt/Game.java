@@ -12,6 +12,7 @@ public class Game {
 		x = playerX;
 		o = playerO;
 		mainBoard = new BigBoard();
+		winMessage = "";
 	}
 	
 	public void playGame() {
