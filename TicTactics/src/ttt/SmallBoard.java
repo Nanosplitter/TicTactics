@@ -1,5 +1,3 @@
-package ttt;
-
 import java.util.ArrayList;
 
 public class SmallBoard {
