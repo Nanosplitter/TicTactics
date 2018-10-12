@@ -1,6 +1,4 @@
-package ttt;
-
-import java.util.Random;
+//import java.util.Random;
 
 public class Algorithm implements Comparable<Algorithm> {
 	int winCount = 0;
@@ -8,7 +6,7 @@ public class Algorithm implements Comparable<Algorithm> {
 	double turnAverage = 0;
 	int turnTotal = 0;
 	int gamesPlayed = 0;
-	Random rnd = new Random();
+	//Random rnd = new Random();
 	
 	public Move getMove(int[][] board, int boardToPlayOn, String validBoards) {
 		return new Move(boardToPlayOn, 0);
